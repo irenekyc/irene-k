@@ -1,0 +1,83 @@
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+h2{
+    font-size:1.8rem;
+    font-weight:400;
+}
+
+h3{
+    font-size:1.5rem;
+    font-weight:400;
+}
+h4{
+    font-size:1.2rem;
+    font-weight:400;
+}
+p{
+    font-size:1rem;
+    font-weight:100;
+    line-height:1.5;
+}
+
+.primary-text{
+    color: $primary-red;
+}
+
+.mt-1{
+    margin-top:1rem;
+}
+
+.mb-1{
+    margin-bottom:1rem;
+}
+
+strong{
+    color: $primary-yellow-light;
+    font-weight:400;
+}
+
+
+.fa-css3-alt{
+    color: #264de4;
+    font-size:4rem;
+}
+
+.fa-react{
+    color: #61DBFB;
+    font-size:4rem;
+    
+}
+
+.fa-js-square{
+    color: #F0DB4F;
+    font-size:4rem;
+}
+
+.btn{
+    cursor: pointer;
+    font-size:1rem;
+    padding:0.5rem 0;
+    background: transparent;
+    &.btn-primary-red{
+        color: $primary-red;
+        position:relative;
+
+        &:after{
+            position:absolute;
+            width:0%;
+            height:2px;
+            bottom:0;
+            left:0;
+            content:"";
+            background: $primary-red;
+            transition: all 1s ease-in-out;
+        }
+
+        &:hover:after{
+            width:100%;
+        }
+    }
+}

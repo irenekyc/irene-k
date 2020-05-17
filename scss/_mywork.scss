@@ -1,0 +1,81 @@
+.section-my-work{
+    width:100vw;
+    height:120vh;
+    position:relative;
+    .section-my-work-heading{
+        text-align:center;
+    }
+
+    .main-content{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width:100vw;
+        
+        .my-work-container
+        {
+            width:100%;
+            display:flex;
+            align-items:center;
+            padding:0.2rem;
+        }
+        .my-work-card{
+            flex:1;
+            background: $main-dark;
+            height:500px;
+            border-radius: 5px;
+            padding: 1.5rem 2rem;
+            box-shadow: 2px 2px 4px rgba($primary-green, 0.05),
+            -2px -2px 4px rgba(white, 0.05);   
+
+            .my-work-heading{
+                display:flex;
+                align-items: flex-end;
+                font-size:1.5rem;
+                width:100%;
+
+                i:first-child{
+                    flex:1;
+                }
+                a{
+                    margin-left:1rem;
+                    font-size:1.5rem;
+                }
+            }
+            .my-work-title{   
+                margin-top:1rem;     
+                h3{
+                   font-size:1.3rem;
+                }
+                p{
+                    font-size:0.8rem;
+                    line-height:2;
+                }
+                .work-image{
+                    margin: 1rem 0;
+                    img{
+                        width:100%;
+                    }
+                }
+            }
+        }
+
+        #my-work-2{
+            transform: scale(1.06);
+            box-shadow: 10px 10px 20px rgba($primary-green, 0.05),
+            -10px -10px 20px rgba(white, 0.05);
+        }
+        .my-work-cta{
+            width:100%;
+            padding: 1rem 12%;
+            text-align: right;
+        }
+    }
+}
+
+.dark{
+    .section-my-work{
+        background: $main-color;
+    }
+}

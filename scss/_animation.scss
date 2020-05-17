@@ -1,0 +1,46 @@
+@keyframes extend-100{
+    0%{
+        width:0;
+        opacity:0;
+    }
+    100%{
+        width:100%;
+        opacity:1;
+    }
+}
+
+
+@keyframes extend-50{
+    0%{
+        width:0;
+        opacity:0;
+    }
+    100%{
+        width:50%;
+        opacity:1;
+    }
+}
+
+@keyframes extend-v-50{
+    0%{
+        opacity:0;
+        height:0;
+    }
+    100%{
+        opacity:1;
+        height:50vh;
+    }
+}
+
+    @keyframes fadeIn{
+        0%{
+            // transform: translate3d(-3rem, 0,0);
+            opacity:0;
+        }
+        100%{
+            transform: translate3d(0, 0,0);
+            opacity:1;
+
+        }
+    }
+

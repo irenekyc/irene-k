@@ -1,0 +1,87 @@
+.section-skills{
+    width:100vw;
+    height:100vh;
+    background: url('../images/bg.jpg') no-repeat;
+    background-position:left;
+    background-size:cover;
+    background-attachment:fixed;
+    position:relative;
+
+    .bg-overlay{
+        width:100%;
+        height:100%;
+        position: absolute;
+        top:0;
+        left:0;
+        opacity:0.8;
+      
+    }
+    .main-content{
+        position: absolute;
+        width:100vw;
+        top:50%;
+        left:0;
+        transform: translateY(-50%);
+        z-index:10;
+        padding:$section-padding-n;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'computer-languages computer-languages'
+        'human-languages education';
+        grid-gap:1rem;
+        
+        #computer-languages{
+            grid-area: computer-languages;
+            padding:2rem;
+            text-align: center;
+        }
+        #human-languages{
+            grid-area: human-languages;
+            padding:2rem;
+        }
+        #education{
+            grid-area: education;
+            padding:2rem;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            flex-wrap:wrap;
+            justify-content: center;
+        }
+        
+        .computer-languages{
+            li{
+                height:75px;
+                list-style: none;
+                margin-right:4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i{
+                    font-size: 60px;
+                    line-height: 75px;
+                }
+                img{
+                    height:60px;
+                }
+            }
+        }
+        .human-languages, .education{
+            list-style:none;
+            align-items: flex-start;
+            justify-content: flex-start;
+            font-size:1rem;
+            li{
+                margin-right:2rem;
+                margin-bottom:1rem;
+            }
+        }
+    }
+}
+
+.dark {
+    .section-skills .bg-overlay{
+        background: $dark-linear;
+    }
+}

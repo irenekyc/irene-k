@@ -1,0 +1,46 @@
+nav{
+    width:100%;
+    height: $nav-size;
+    position:fixed;
+    top:0;
+    left:0;
+    padding: $section-padding;
+    z-index:100;
+
+    .nav-links{
+        width: 700px;
+        height:100%;
+        margin-right:auto;
+        margin-left:auto;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+
+    
+            .active{
+            position: relative;
+            padding: 1rem 1.5rem;
+        }
+
+            .active:after{
+                position:absolute;
+                content: "";
+                width:0%;
+                height:3px;
+                background: $primary-red;
+                bottom:0;
+                left:0;
+                animation: extend-100 1s linear forwards;
+            }
+
+        }
+        
+    }
+
+
+
+
+.dark nav{
+    color: $main-text;
+    background: transparent;
+}
