@@ -6,39 +6,31 @@
         text-align:center;
     }
 
-    .main-content{
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
+    .main-content-my-work{
+        @include OVERLAY-C;
         width:100vw;
         
         .my-work-container
         {
             width:100%;
-            display:flex;
-            align-items:center;
+            @include FLEXBOX(center, center);
             padding:0.2rem;
         }
         .my-work-card{
             flex:1;
-            background: $main-dark;
             height:500px;
             border-radius: 5px;
             padding: 1.5rem 2rem;
-            box-shadow: 2px 2px 4px rgba($primary-green, 0.05),
-            -2px -2px 4px rgba(white, 0.05);   
 
             .my-work-heading{
-                display:flex;
-                align-items: flex-end;
-                font-size:1.5rem;
+                @include FLEXBOX(space-between, flex-end);
                 width:100%;
-
+                font-size:4rem;
                 i:first-child{
                     flex:1;
                 }
-                a{
+                a
+                {
                     margin-left:1rem;
                     font-size:1.5rem;
                 }
@@ -74,8 +66,27 @@
     }
 }
 
-.dark{
-    .section-my-work{
-        background: $main-color;
+.loaded{
+    &.main-content-my-work{
+        
+        .section-my-work-heading{
+            transform: translate3d(0, -3rem, 0);
+        }
+        #my-work-1{
+            transform: translate3d(-3rem, 0, 0);
+            animation-delay:0.5s;
+        }
+        #my-work-2{
+            transform: translate3d(0, 100px, 0);
+            animation-delay:0.8s;
+        }
+        #my-work-3{
+            transform: translate3d(3rem, 0, 0);
+            animation-delay:0.5s;
+        } 
+        *{
+            opacity:0;
+            animation: fadeIn 1s linear forwards;
+        }   
     }
 }

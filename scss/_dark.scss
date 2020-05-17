@@ -1,0 +1,35 @@
+//THIS SCSS SHEET DECLARE THE COLOR IN DARK MODE
+
+body{
+    &.dark{
+        color:white;
+    a{
+        color:white;
+        &:hover{
+            color: $primary-red;
+        } 
+    }
+    nav{
+        color: $main-text;
+        background: transparent;
+    }
+    .section-hero .bg-overlay{
+        background: $dark-linear;
+    }
+    .section-my-work{
+        background: $main-color;
+        .my-work-card{
+            background: $main-dark;
+            box-shadow: 2px 2px 4px rgba($primary-green, 0.05),
+            -2px -2px 4px rgba(white, 0.05);   
+        }
+    }
+    .section-skills .bg-overlay{
+        background: $dark-linear;
+    }
+    footer{
+        background: $dark-linear;
+        color: white;
+    }   
+}
+}

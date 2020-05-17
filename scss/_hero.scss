@@ -10,19 +10,12 @@
 
     .bg-overlay{
         opacity:0.7;
-        position: absolute;
-        width:100%;
-        height:100%;
-        top:0;
-        left:0;
+        @include OVERLAY-F;
         z-index:9;
     }
 
     .main-content{
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
+       @include OVERLAY-C;
         z-index:10;
 
         .sub-heading{
@@ -32,9 +25,7 @@
         }
 
         .heading{
-            display:flex;
-            justify-content: center;
-            align-items: center;
+            @include FLEXBOX(center, center);
             padding: 2rem 2rem;
             position:relative;
             h1{
@@ -89,10 +80,4 @@
             animation-delay:4.5s;
         }
 }
-}
-
-.dark{
-    .section-hero .bg-overlay{
-        background: $dark-linear;
-    }
 }

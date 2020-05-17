@@ -8,20 +8,13 @@
     position:relative;
 
     .bg-overlay{
-        width:100%;
-        height:100%;
-        position: absolute;
-        top:0;
-        left:0;
+        @include OVERLAY-F;
         opacity:0.8;
       
     }
-    .main-content{
-        position: absolute;
+    .main-content-skills{
+        @include OVERLAY-C;
         width:100vw;
-        top:50%;
-        left:0;
-        transform: translateY(-50%);
         z-index:10;
         padding:$section-padding-n;
         display:grid;
@@ -44,10 +37,8 @@
             padding:2rem;
         }
         ul{
-            display: flex;
-            align-items: center;
+            @include FLEXBOX(center, center);
             flex-wrap:wrap;
-            justify-content: center;
         }
         
         .computer-languages{
@@ -55,9 +46,7 @@
                 height:75px;
                 list-style: none;
                 margin-right:4rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include FLEXBOX(center, center);
                 i{
                     font-size: 60px;
                     line-height: 75px;
@@ -69,8 +58,7 @@
         }
         .human-languages, .education{
             list-style:none;
-            align-items: flex-start;
-            justify-content: flex-start;
+            @include FLEXBOX(flex-start, flex-start);
             font-size:1rem;
             li{
                 margin-right:2rem;
@@ -80,8 +68,52 @@
     }
 }
 
-.dark {
-    .section-skills .bg-overlay{
-        background: $dark-linear;
+.loaded{
+    &.main-content-skills{
+       
+        #computer-languages{
+            transform: translate3d(0,3rem,0);
+            *{
+                @for $i from 1 through 20{
+                    &:nth-child(#{$i}){
+                        animation-delay: 0.3s * $i;
+                        transform: translate3d(0, 2rem,0);
+                    }
+                }
+            }
+        }
+        #human-languages{
+            animation-delay:1s;
+            .human-languages{
+                animation-delay:1s;
+                *{
+                    @for $i from 1 through 10{
+                        &:nth-child(#{$i}){
+                            animation-delay: 0.2s * $i;
+                            transform: translate3d(-10rem, 0,0);
+                        }
+                    }
+                }
+            } 
+        }
+        #education{
+            animation-delay:1s;
+            .education{
+                animation-delay:1s;
+                *{
+                    @for $i from 1 through 10{
+                        &:nth-child(#{$i}){
+                            animation-delay: 0.5s * $i;
+                            transform: translate3d(10rem, 0,0);
+                        }
+                    }
+                }
+            }
+
+        }
+        *{
+            opacity:0;
+            animation: fadeIn 1s linear forwards;
+        }
     }
 }

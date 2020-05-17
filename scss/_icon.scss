@@ -1,0 +1,55 @@
+// ICON COLOR DECLARATIONS && HOVER TEXT
+.fa-css3-alt{
+    color: #264de4;
+}
+
+.fa-react{
+    color: #61DBFB;  
+}
+
+.fa-js-square{
+    color: #F0DB4F;
+}        
+
+.fa-html5{
+    color:#E44D26;
+}
+
+.fa-php{
+    color:black;
+}
+
+.fa-node-js{
+ color: #3C873A;
+}
+
+.fa-git-alt{
+    color:#F1502F;
+}
+
+.fa-sass{
+    color:#CD6799;
+}
+
+.hover-des{
+    position: relative;
+    
+    &:hover:after{
+        position:absolute;
+        min-width:120%;
+        max-width:200%;
+        padding:0.5rem 1rem;;
+        height:30px;
+        font-size:12px;
+        line-height:30px;
+        content:attr(data-des);
+        background: $main-dark;
+        border-radius: 10px;
+        color:white;
+        opacity:0.9;
+        top: 100%;
+        left:50%;
+        transform: translateX(-50%);
+        z-index:1;
+    }
+}

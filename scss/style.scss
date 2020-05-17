@@ -1,28 +1,24 @@
 @import 'variables';
 @import 'animation';
 @import 'utilities';
+@import 'icon';
+@import 'mixins';
 @import 'navbar';
 @import 'hero';
 @import 'about';
 @import 'mywork';
 @import 'skills';
 @import 'footer';
+@import 'dark';
+@import 'light';
 
+html{
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
 body{
     font-family: $main-font;
     font-size:16px;
-}
-body {
-    &.dark{
-            color: white;;
-            font-size: 12px;
-
-            a{
-                color:white;
-                
-            }
-    }
-
 }
 
 *{

@@ -1,0 +1,22 @@
+@mixin FLEXBOX($justify, $align){
+    display:flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//OVERLAY FULL SIZE
+@mixin OVERLAY-F{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+//OVERLAY CENTER
+@mixin OVERLAY-C{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}

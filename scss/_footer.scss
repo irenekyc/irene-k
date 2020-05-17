@@ -3,21 +3,13 @@ footer{
     height:40vh;
     position: relative;
     .bg-overlay{
-        width:100%;
-        height:100%;
-        position: absolute;
+        @include OVERLAY-F;
         background: url('../images/circuit-board.svg') repeat;
-        top:0;
-        left:0;
         opacity:0.9;
     }
 
-    .main-content{
-        width:100%;
-        height:100%;
-        position:absolute;
-        top:0;
-        left:0;
+    .main-content-footer{
+        @include OVERLAY-F;
         padding: $section-padding-n;
         display:flex;
         flex-direction:column;
@@ -66,9 +58,21 @@ footer{
     }
 }
 
-.dark{
-    footer{
-        background: $dark-linear;
-        color: white;
+.loaded{
+    &.main-content-footer{
+        *{
+            opacity:0;
+            animation: fadeIn 2s forwards;
+        }
+        .social-media{
+            transform: translate3d(-10rem, 0, 0);
+        }
+        .footer-footer{
+            transform: translate3d(10rem, 0, 0);
+        }
+        .footer-main{
+            transform: translate3d(0, 5rem, 0);
+        
+        }
     }
 }

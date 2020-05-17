@@ -9,18 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a1e74affc8.js" crossorigin="anonymous"></script>
 </head>
-<body class="dark loaded">
-    <nav>
+<body class="dark ">
+    <nav class="loaded">
         <div class="nav-links">
-            <a class="active" href="#"> Welcome</a>
-            <a href="#"> Who I Am</a>
-            <a href="#"> What I Do</a>
-            <a href="#"> What I know</a>
-            <a href="#"> Contact</a>
+            <a class="active" href="#welcome"> Welcome</a>
+            <a href="#about"> Who I Am</a>
+            <a href="#my-work"> What I Do</a>
+            <a href="#skills"> What I know</a>
+            <a href="#footer"> Contact</a>
         </div>
     </nav>
     <main>
-        <section class="section-hero" id="welcome">
+        <section class="section-hero loaded" id="welcome">
             <div class="bg-overlay"> </div>
             <div class="main-content">
                 <div class="sub-heading">
@@ -38,12 +38,12 @@
 
         <section class="section-about" id="about">
             <div class="bg-overlay"></div>
-            <div class="main-content">
-                <div class="about-me-intro ">
+            <div class="main-content-about pre-load"  id="loading-about">
+                <div class="about-me-intro">
                     <div class="about-me-intro-heading mb-1">
-                    <h3 class="primary-text"> Hi. My name is Irene.</h3>
-                    <h4>I enjoy building things for website.</h4>
-                </div>
+                        <h3 class="primary-text"> Hi. My name is Irene.</h3>
+                        <h4>I enjoy building things for website.</h4>
+                    </div>
 
                     <p> I am anambitious, hard-working and fast learning self-taught web developer. In late January 2020, I start learning basic HTML, CSS and Javascript. Now, I am able and confident to build </p>
                     <ul>
@@ -56,7 +56,7 @@
                         <li> simple log in validation using <strong>react-redux</strong></li>
                     </ul>
                 <div class="about-me-intro-cta mt-1">
-                    <button class="btn btn-primary-red"> Full qualifications <i class="fas fa-arrow-right"></i></button>
+                    <a href="#skills" class="btn btn-primary-red"> Full qualifications <i class="fas fa-arrow-right"></i></a>
                 </div>
                 </div>
                 <div class="about-me-image">
@@ -66,9 +66,7 @@
         </section>
 
         <section class="section-my-work" id="my-work">
-            <div class="main-content">
-
-           
+            <div class="main-content-my-work pre-load" id="loading-my-work">  
             <div class="section-my-work-heading mb-1">
                 <h3 class="primary-text"> Recent projects </h3>
             </div>
@@ -128,28 +126,27 @@
 
             </div>
             <div class="my-work-cta">
-                <button class="btn btn-primary-red"> Full portfolio <i class="fas fa-arrow-right"></i></button>
+                <a class="btn btn-primary-red"> Full portfolio <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
         </section>
         <section class="section-skills" id="skills">
             <div class="bg-overlay"> </div>
-            <div class="main-content">
-
+            <div class="main-content-skills pre-load" id=loading-skills>
                     <div class="grid" id="computer-languages">
                     <h4 class="mb-1"> <i class="fas fa-laptop-code"></i> Computer Languages</h4>
                     <ul class="computer-languages mb-1">
-                        <li><i class="fab fa-html5"></i></li>
-                        <li><i class="fab fa-css3-alt"></i></li>
-                        <li><i class="fab fa-js"></i></li>
-                        <li><i class="fab fa-php"></i></li>
-                        <li><i class="fab fa-node-js"></i></li>
-                        <li><i class="fab fa-react"></i></li>
-                        <li><i class="fab fa-git-alt"></i></li>
-                        <li><i class="fab fa-sass"></i></li>
-                        <li><img src="images/icon-square-small.png"></li>
-                        <li><img src="images/redux (1).png"></li>
-                        <li><img src="images/mongodb.png"></li>
+                        <li><i class="fab fa-html5 hover-des" data-des="HTML 5"></i></li>
+                        <li><i class="fab fa-css3-alt hover-des" data-des="CSS 3" ></i></li>
+                        <li><i class="fab fa-js-square hover-des" data-des="JS (ES6)"></i></li>
+                        <li><i class="fab fa-php hover-des" data-des="php"></i></li>
+                        <li><i class="fab fa-node-js hover-des" data-des="node js"></i></li>
+                        <li><i class="fab fa-react hover-des" data-des="react js"></i></li>
+                        <li><i class="fab fa-git-alt hover-des" data-des="git"></i></li>
+                        <li><i class="fab fa-sass hover-des" data-des="Sass"></i></li>
+                        <li class="hover-des" data-des="Webpack"><img  src="images/icon-square-small.png" ></li>
+                        <li class="hover-des" data-des="redux"><img src="images/redux (1).png"></liclass="hover-des" data-des="webpack">
+                        <li class="hover-des" data-des="mongoDB"><img src="images/mongodb.png"></li>
                     </ul>
                 </div>
                 <div class="grid" id="human-languages">
@@ -184,10 +181,10 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="footer">
         <div class="bg-overlay">
         </div>
-        <div class="main-content">
+        <div class="main-content-footer pre-load" id="loading-footer">
             <div class="footer-heading">
                 <div class="social-media">
                  

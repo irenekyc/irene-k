@@ -12,16 +12,11 @@ nav{
         height:100%;
         margin-right:auto;
         margin-left:auto;
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-
-    
-            .active{
+        @include FLEXBOX(space-between, center);
+        .active{
             position: relative;
             padding: 1rem 1.5rem;
         }
-
             .active:after{
                 position:absolute;
                 content: "";
@@ -32,15 +27,5 @@ nav{
                 left:0;
                 animation: extend-100 1s linear forwards;
             }
-
-        }
-        
+        }  
     }
-
-
-
-
-.dark nav{
-    color: $main-text;
-    background: transparent;
-}
