@@ -13,6 +13,10 @@ body{
         color: $main-text;
         background: transparent;
     }
+
+    .nav-bg{
+        background: $main-dark;
+    }
     .section-hero .bg-overlay{
         background: $dark-linear;
     }

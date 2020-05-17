@@ -13,9 +13,11 @@ nav{
         margin-right:auto;
         margin-left:auto;
         @include FLEXBOX(space-between, center);
+        a{
+            padding: 1rem 1.5rem;
+        }
         .active{
             position: relative;
-            padding: 1rem 1.5rem;
         }
             .active:after{
                 position:absolute;

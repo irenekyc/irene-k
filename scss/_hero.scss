@@ -14,14 +14,19 @@
         z-index:9;
     }
 
-    .main-content{
+    .main-content-hero{
        @include OVERLAY-C;
+       width:50%;
+       height:100%;
+       @include FLEXBOX(center, flex-start);
+       flex-direction: column;
         z-index:10;
 
         .sub-heading{
             padding:0 5rem;
             opacity:0;
             transform: translate3d(0, 2rem, 0);
+
         }
 
         .heading{
@@ -58,7 +63,7 @@
 }
 
 .loaded{
-    .main-content{
+    &.main-content-hero{
         .sub-heading{
             animation: fadeIn 1s forwards;
         }
