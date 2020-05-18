@@ -1,0 +1,272 @@
+///////////////////// MOBILE //////////////////////
+@media (max-width:500px){
+    h1{
+        font-size:1.8rem;
+    }
+
+    .section-about{
+        height:140vh;
+        .main-content-about{
+            @include FLEXBOX (space-around, center);
+            flex-direction:column;
+        }
+    }
+
+    .section-my-work{
+        height:200vh;
+        .my-work-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'card1'
+        'card2'
+        'card3';
+        }
+    }
+
+    .section-skills{
+        height:200vh;
+        font-size:1rem;
+        .computer-languages{
+            li{
+                height:50px;
+                margin:1rem;
+                @include FLEXBOX(center, center);
+                i{
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+                img{
+                    height:40px;
+                }
+            }
+        }
+    }
+
+    .footer-btn{
+        flex-direction:column;
+        padding:2rem;
+    }
+}
+
+/////////////////// TABLET /////////////////////
+@media (max-width:850px){
+    .nav-links{
+        a{
+            font-size:14px;
+        }    
+    }
+    .main-content-about{
+        grid-template-areas: 'intro photo'
+        'details details';
+    }
+    #about-me-worklist{
+        grid-column-start: 1;
+        grid-column-end:4;
+    }
+    .about-me-image{
+        max-width:230px;
+        &:after{
+            position:absolute;
+            content:"";
+            width:80%;
+            height:70%;
+            border:5px solid $primary-red;
+            right:-20px;
+            bottom:0px;
+            z-index:-1;
+        }
+    }
+   
+
+    .my-work-container{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'card2 card2'
+        'card1 card3';
+
+        .my-work-heading{
+            font-size:2.5rem;
+            a{
+                font-size:1rem;
+            }
+        }
+
+        .my-work-card{
+            padding: 1rem;
+
+            .my-work-title{
+                h3{
+                    font-size:1rem;
+                }
+                p{
+                    font-size:0.7rem;
+                }
+            }
+        }
+
+        #my-work-1{
+            grid-area: card1;
+            height:400px;
+        }
+        #my-work-3{
+            grid-area: card3;
+            height:400px;
+        }
+    }
+    .section-skills{
+        height:150vh;
+    }
+    .main-content-skills{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'computer-languages'
+        'human-languages'
+        'education';
+
+       
+            .computer-languages{
+                li{
+                    height:60px;
+                    margin:1rem;
+                    @include FLEXBOX(center, center);
+                    i{
+                        font-size: 50px;
+                        line-height: 60px;
+                    }
+                    img{
+                        height:50px;
+                    }
+                }
+            }
+        
+
+        .human-languages, .education{
+            li{
+                margin-right:0.7rem;
+                margin-bottom:0.5rem;
+            }
+
+        }
+    }
+}
+
+
+@media (min-width:501px) and (max-width:850px){
+    #my-work-2{
+        grid-area: card2;
+        @include FLEXBOX(space-between, flex-start);
+        height:280px;
+        .my-work-heading{
+            height:100%;
+            flex-direction: column;
+            @include FLEXBOX(space-between, center);
+        }
+        .work-image{
+            width:40%;
+        }
+    
+    }
+}
+
+////////////////////SMALL DESKTOP //////////////////////////
+@media (min-width:851px){
+    .nav-links{
+        a{
+            font-size:16px;
+        }    
+    }
+    .main-content-about{
+        padding:$section-padding-n;
+        grid-template-areas: 'intro photo'
+        'details photo';
+        #about-me-intro-worklist{
+            grid-area:details;
+    }
+    .about-me-image
+    {
+        max-height:60vh;
+        max-width:350px;
+        &:after{
+            position:absolute;
+            content:"";
+            width:80%;
+            height:80%;
+            border:5px solid $primary-red;
+            right:-10%;
+            bottom:-10%;
+            z-index:-1;
+        }
+    }
+        
+    }
+    .section-my-work{
+        height:120vh;
+    }
+    .my-work-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'card1 card2 card3';
+        .my-work-card{
+            height:500px;
+            .my-work-heading{
+                @include FLEXBOX(space-between, flex-end);
+                font-size:4rem;
+                a
+            {
+                margin-left:1rem;
+                font-size:1.5rem;
+            }
+        }
+        .my-work-title{   
+            margin-top:1rem;     
+            h3{
+               font-size:1.3rem;
+            }
+            p{
+                font-size:0.8rem;
+                line-height:2;
+            }
+    }
+    }
+}
+.section-skills{
+    height:100vh;
+}
+    .main-content-skills{
+        padding: $section-padding;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'computer-languages computer-languages'
+        'human-languages education';
+
+        .computer-languages{
+            li{
+                height:75px;
+                list-style: none;
+                margin-right:4rem;
+                i{
+                    font-size: 60px;
+                    line-height: 75px;
+                }
+                img{
+                    height:60px;
+                }
+            }
+        }
+        .human-languages, .education{
+            li{
+                margin-right:2rem;
+                margin-bottom:1rem;
+            }
+        }
+    }
+
+}
+
+////////////////////////LARGER DEVICE ///////////////////
+@media (min-width:1280px){
+
+    .main-content-about{
+        padding:$section-padding-n;
+    }
+}
+
+
+

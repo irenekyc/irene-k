@@ -13,37 +13,27 @@
         .my-work-container
         {
             width:100%;
-            @include FLEXBOX(center, center);
             padding:0.2rem;
+            display:grid;
+        
         }
         .my-work-card{
-            flex:1;
-            height:500px;
             border-radius: 5px;
             padding: 1.5rem 2rem;
 
             .my-work-heading{
                 @include FLEXBOX(space-between, flex-end);
                 width:100%;
-                font-size:4rem;
                 i:first-child{
                     flex:1;
                 }
-                a
-                {
-                    margin-left:1rem;
-                    font-size:1.5rem;
+                a{
+                    margin:0.5rem;
                 }
             }
             .my-work-title{   
                 margin-top:1rem;     
-                h3{
-                   font-size:1.3rem;
-                }
-                p{
-                    font-size:0.8rem;
-                    line-height:2;
-                }
+              
                 .work-image{
                     margin: 1rem 0;
                     img{
@@ -52,6 +42,7 @@
                 }
             }
         }
+  
         .my-work-cta{
             width:100%;
             padding: 1rem 12%;

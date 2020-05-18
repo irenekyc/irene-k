@@ -34,8 +34,10 @@ footer{
             flex-grow:1;
             padding:2.5rem;
             text-align:center;
+            @include FLEXBOX(center, center);
             .footer-btn{
                 @include FLEXBOX(space-between, center);
+
                 width:350px;
                 margin-right:auto;
                 margin-left:auto;

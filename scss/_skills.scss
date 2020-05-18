@@ -1,6 +1,6 @@
 .section-skills{
     width:100vw;
-    height:100vh;
+    height:150vh;
     background: url('../images/bg.jpg') no-repeat;
     background-position:left;
     background-size:cover;
@@ -16,11 +16,8 @@
         @include OVERLAY-C;
         width:100vw;
         z-index:10;
-        padding:$section-padding-n;
+        padding: $section-padding-w;
         display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'computer-languages computer-languages'
-        'human-languages education';
         grid-gap:1rem;
 
         h4{
@@ -51,27 +48,17 @@
         
         .computer-languages{
             li{
-                height:75px;
+            
                 list-style: none;
-                margin-right:4rem;
                 @include FLEXBOX(center, center);
-                i{
-                    font-size: 60px;
-                    line-height: 75px;
-                }
-                img{
-                    height:60px;
-                }
+              
             }
         }
         .human-languages, .education{
             list-style:none;
             @include FLEXBOX(flex-start, flex-start);
             font-size:1rem;
-            li{
-                margin-right:2rem;
-                margin-bottom:1rem;
-            }
+            
         }
     }
 }

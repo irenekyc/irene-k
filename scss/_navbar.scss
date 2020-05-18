@@ -4,17 +4,20 @@ nav{
     position:fixed;
     top:0;
     left:0;
-    padding: $section-padding;
     z-index:100;
+    line-height:$nav-size;
+    padding:0 8%;
 
     .nav-links{
-        width: 700px;
+        width: 100%;
+        max-width:700px;
         height:100%;
         margin-right:auto;
         margin-left:auto;
         @include FLEXBOX(space-between, center);
         a{
-            padding: 1rem 1.5rem;
+            padding: 0 1.5rem;
+    
         }
         .active{
             position: relative;

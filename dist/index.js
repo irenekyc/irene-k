@@ -12,6 +12,7 @@ let browserHeight
 
 window.addEventListener('load', (e)=>{
     browserHeight = window.innerHeight
+    
     if(dark.checked){
         document.querySelector('body').classList.add('dark')
     }
@@ -41,26 +42,25 @@ window.addEventListener("scroll", (e)=>{
     } else {
         nav.classList.remove('nav-bg')
     }
-
     // calculate each section offset top  and check if the section is current section
     sections.forEach(el=>{
       if (el.getBoundingClientRect().y / browserHeight >0 &&
-        el.getBoundingClientRect().y / browserHeight < 0.5){
+        el.getBoundingClientRect().y / browserHeight < 0.6){
     // remove pre-load and add loaded classes to the section
-            el.classList.remove('pre-load')
-            el.classList.add('loaded')
+        
+        el.classList.remove('pre-load')
+        el.classList.add('loaded')
+        
      // add active to nav bar link
             addNavActive(el.id)
         }
         else if (el.id === "welcome" && window.scrollY / browserHeight <0.8){
-            hero.classList.add('loaded')
-            el.classList.remove('pre-load')
+     
+                hero.classList.add('loaded')
+                el.classList.remove('pre-load')
+             
+        
             addNavActive(el.id)
-        }
-        else if 
-        (el.getBoundingClientRect().y / browserHeight < -0.8){
-            el.classList.remove('loaded')
-            el.classList.add('pre-load')
         }
     })  
 })

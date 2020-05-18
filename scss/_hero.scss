@@ -16,7 +16,6 @@
 
     .main-content-hero{
        @include OVERLAY-C;
-       width:50%;
        height:100%;
        @include FLEXBOX(center, flex-start);
        flex-direction: column;
