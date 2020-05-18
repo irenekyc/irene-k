@@ -17,8 +17,26 @@ body{
     .nav-bg{
         background: $main-dark;
     }
-    .section-hero .bg-overlay{
+    .section-hero {
+        .bg-overlay{
+            background: $dark-linear;
+    }
+    .heading{
+        &:before{
+            background: $main-text;
+        }
+        &:after{
+           
+            background: $main-text;
+        }
+    }
+}
+    
+    .section-about{
         background: $dark-linear;
+    }
+    .section-about .bg-overlay{
+        background: url('../images/circuit-board.svg') repeat;
     }
     .section-my-work{
         background: $main-color;
@@ -27,13 +45,39 @@ body{
             box-shadow: 2px 2px 4px rgba($primary-green, 0.05),
             -2px -2px 4px rgba(white, 0.05);   
         }
+        #my-work-2{
+            box-shadow: 10px 10px 20px rgba($primary-green, 0.08),
+            -10px -10px 20px rgba(white, 0.08);
+        }
     }
     .section-skills .bg-overlay{
         background: $dark-linear;
     }
     footer{
         background: $dark-linear;
-        color: white;
+        .bg-overlay{
+            background: url('../images/circuit-board.svg') repeat;
+        }
+        #back-to-top{
+            border: 1px solid $primary-red;
+            color: $primary-red;
+
+            &:hover{
+                color:white;
+                border: 1px solid white;
+            }
+        }
+        .social-media{
+            &:before{
+                background:white;
+            }}
+        .footer-footer{
+            &:after{
+                background: white;}
+            span{
+                color:white;}
+        }
+        
     }   
 }
 }

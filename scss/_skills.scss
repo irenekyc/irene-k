@@ -22,6 +22,14 @@
         grid-template-areas: 'computer-languages computer-languages'
         'human-languages education';
         grid-gap:1rem;
+
+        h4{
+            i{
+                font-size:2rem;
+                color: $primary-yellow-light;
+                margin-right:1rem;
+            }
+        }
         
         #computer-languages{
             grid-area: computer-languages;
@@ -76,7 +84,7 @@
             *{
                 @for $i from 1 through 20{
                     &:nth-child(#{$i}){
-                        animation-delay: 0.3s * $i;
+                        animation-delay: 0.2s * $i;
                         transform: translate3d(0, 2rem,0);
                     }
                 }
@@ -89,7 +97,7 @@
                 *{
                     @for $i from 1 through 10{
                         &:nth-child(#{$i}){
-                            animation-delay: 0.2s * $i;
+                            animation-delay: 0.1s * $i;
                             transform: translate3d(-10rem, 0,0);
                         }
                     }
@@ -113,7 +121,7 @@
         }
         *{
             opacity:0;
-            animation: fadeIn 1s linear forwards;
+            animation: fadeIn 0.6s linear forwards;
         }
     }
 }

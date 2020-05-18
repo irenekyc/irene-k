@@ -21,3 +21,10 @@ $nav-size: 60px;
 
 $section-padding: 2rem 8%;
 $section-padding-n: 2rem 12%;
+
+///////LIGHT MODE
+
+$light-mode-main: #efefef;
+$light-mode-text:hsl(228, 28%, 20%);
+
+$light-linear:linear-gradient(-135deg, $main-text, #D3E2E2)

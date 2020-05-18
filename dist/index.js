@@ -6,12 +6,33 @@ const skills = document.getElementById('loading-skills')
 const footer = document.getElementById('loading-footer')
 const navLinks = document.querySelectorAll('.nav-links a')
 const sections = [hero, about, myWork, skills, footer]
+const scrollToTop = document.getElementById('back-to-top')
+const dark = document.getElementById('dark')
 let browserHeight 
 
 window.addEventListener('load', (e)=>{
     browserHeight = window.innerHeight
-    
+    if(dark.checked){
+        document.querySelector('body').classList.add('dark')
+    }
 })
+
+dark.addEventListener('change', (e)=>{
+    if (dark.checked){
+        document.querySelector('body').classList.add('dark')
+        document.querySelector('body').classList.remove('light')
+    } else {
+        document.querySelector('body').classList.remove('dark')
+        document.querySelector('body').classList.add('light')
+    }
+})
+
+scrollToTop.addEventListener('click', ()=>{
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0;
+})
+
+
 
 window.addEventListener("scroll", (e)=>{
     //add background color to nav bar
@@ -50,3 +71,4 @@ const addNavActive = (curEl)=>{
     })
     document.getElementById(`nav-${curEl}`).classList.add('active')
 }
+

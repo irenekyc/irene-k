@@ -1,1 +1,76 @@
 //THIS SCSS SHEET DECLARE THE COLOR IN LIGHT MODE
+
+body{
+    &.light{
+        color:$light-mode-text;
+    a{
+        color:$light-mode-text;
+        &:hover{
+            color: $primary-red;
+        } 
+    }
+    nav{
+        background: transparent;
+    }
+    .nav-bg{
+        background: white;;
+    }
+    
+    .section-hero {
+        .bg-overlay{
+            background: $light-linear;
+        }
+        .heading{
+            &:before{
+                background: $light-mode-text;
+            }
+            &:after{
+               
+                background: $light-mode-text;
+            }
+        }
+    }
+    .section-about{
+        background: url('../images/circuit-board_light.svg') repeat;
+    }
+    .section-about .bg-overlay{
+        background: $light-linear;
+        opacity:0.9;
+    }
+    .section-my-work{
+        background:  $light-mode-main;
+        .my-work-card{
+            background: white;
+            box-shadow: 2px 2px 4px rgba($primary-green, 0.09),
+            -2px -2px 4px rgba($primary-green, 0.09);   
+        }
+        #my-work-2{
+            box-shadow: 10px 10px 20px rgba($primary-green, 0.1),
+            -10px -10px 20px rgba($primary-green, 0.1);
+        }
+    }
+    .section-skills .bg-overlay{
+        background: $light-linear;
+    }
+    footer{
+        background: url('../images/circuit-board_light.svg') repeat;
+        .bg-overlay{
+            background: $light-linear;
+        }
+        #back-to-top{
+            border: 1px solid $light-mode-text;
+            color: $light-mode-text;
+        }
+        .social-media{
+            &:before{
+                background:$light-mode-text;
+            }}
+        .footer-footer{
+            span{
+                color:$light-mode-text;}
+            &:after{
+                    background: $light-mode-text;
+        }}
+    }
+}
+}
