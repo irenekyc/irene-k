@@ -34,11 +34,11 @@ scrollToTop.addEventListener('click', ()=>{
 })
 
 
-
 window.addEventListener("scroll", (e)=>{
     //add background color to nav bar
     if (window.scrollY > 60){
         nav.classList.add('nav-bg')
+        console.log('add')
     } else {
         nav.classList.remove('nav-bg')
     }

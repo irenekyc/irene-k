@@ -40,4 +40,9 @@ button{
     outline:none;
 }
 
+.nav-bg{
+    background: $main-color;
+}
+
+@import 'mobile-menu';
 @import 'responsive';

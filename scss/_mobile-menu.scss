@@ -1,0 +1,10 @@
+@media (max-width:766px){
+    .nav-links{
+        position:fixed;
+        top:0;
+        left:0;
+        @include FLEXBOX(space-around, center);
+        flex-wrap: wrap;
+        width:100%;
+    }
+}
